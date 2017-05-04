@@ -173,11 +173,12 @@ export default class App extends React.Component {
         <View style = {{top: -100}}>
           <Image source= { playerList[this.state.correctIndex].img }/>
         </View>
+
         <View style = {styles.counterContainer}>
           <Text >number correct:</Text>
-          <Text > correct button: {this.state.correctButton}, correct name: {playerList[this.state.correctIndex].name}</Text>
           <Text style = {[styles.counter]}>         {this.state.count} </Text>
         </View>
+
         <View style={[styles.buttonContainer, {backgroundColor: this.state.button4color}]}>
           <Button onPress={this.buttonClicked.bind(null, 3)} title={this.state.button4text} color="#FFFFFF" accessibilityLabel="Button1" disabled={this.state.isDisabled}/>
         </View>
@@ -190,6 +191,7 @@ export default class App extends React.Component {
         <View style={[styles.buttonContainer, {bottom: 170, backgroundColor: this.state.button1color}]}>
           <Button onPress={this.buttonClicked.bind(null, 0)} title={this.state.button1text}  color="#FFFFFF" accessibilityLabel="Button1" disabled={this.state.isDisabled}/>
         </View>
+        
       </View>
 
     );
